@@ -1,0 +1,9 @@
+pl/leszekp/petstore/dto/Pet.java
+ pl.leszekp.petstore.dto.Pet
+ pl.leszekp.petstore.dto.Pet$Status
+pl/leszekp/petstore/configuration/RestTemplateConfiguration.java
+ pl.leszekp.petstore.configuration.RestTemplateConfiguration
+pl/leszekp/petstore/PetstoreApplication.java
+ pl.leszekp.petstore.PetstoreApplication
+pl/leszekp/petstore/client/PetStoreClient.java
+ pl.leszekp.petstore.client.PetStoreClient
