@@ -1,91 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.PetStoreSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-03-01T09:58:20" hostname="DESKTOP-07UDNL9" time="11.607">
+<testsuite name="petstore.PetStoreSpec" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-03-01T19:45:58" hostname="DESKTOP-07UDNL9" time="11.646">
   <properties/>
-  <testcase name="create pet as user should return 200 and pet in response" classname="petstore.PetStoreSpec" time="9.572"/>
-  <testcase name="get pet should return pet with status code 200" classname="petstore.PetStoreSpec" time="0.488"/>
-  <testcase name="update pet as user should return 200 and pet in response" classname="petstore.PetStoreSpec" time="0.402"/>
-  <testcase name="update pet as user should return 200 and statute should be sold" classname="petstore.PetStoreSpec" time="0.461"/>
-  <testcase name="delete pet should delete pet with status code 200" classname="petstore.PetStoreSpec" time="0.427"/>
-  <testcase name="delete pet1 should delete pet with status code 404" classname="petstore.PetStoreSpec" time="0.243"/>
-  <system-out><![CDATA[10:58:16.350 [Test worker] INFO com.athaydes.spockframework.report.SpockReportExtension - Got configuration from Spock: com.athaydes.spockframework.report.internal.SpockReportsConfiguration([:])
-10:58:16.603 [Test worker] DEBUG com.athaydes.spockframework.report.SpockReportExtension - Configuring com.athaydes.spockframework.report.SpockReportExtension
-10:58:17.347 [Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.aggregatedJsonReportDir=, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true, com.athaydes.spockframework.report.outputDir=build/spock-reports, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.specSummaryNameOption=class_name_and_title, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator}
-10:58:18.919 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property projectVersion set to Unknown
-10:58:18.924 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property aggregatedJsonReportDir set to 
-10:58:18.925 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'enabled' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
-10:58:18.934 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property printThrowableStackTrace set to false
-10:58:18.937 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'specTemplateFile' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
-10:58:18.937 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'reportFileExtension' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
-10:58:19.191 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property hideEmptyBlocks set to false
-10:58:19.193 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'summaryTemplateFile' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
-10:58:19.194 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'summaryFileName' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
-10:58:19.198 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property enabled set to true
-10:58:19.202 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property outputDir set to build/spock-reports
-10:58:19.204 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property projectName set to 
-10:58:19.207 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property showCodeBlocks set to false
-10:58:19.217 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property specSummaryNameOption set to class_name_and_title
-10:58:19.218 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property inlineCss set to true
-10:58:19.221 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property featureReportCss set to spock-feature-report.css
-10:58:19.222 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property testSourceRoots set to src/test/groovy
-10:58:19.222 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property summaryReportCss set to spock-summary-report.css
-10:58:19.223 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property excludeToc set to false
-10:58:20.281 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before spec: petstore.PetStoreSpec
-10:58:20.293 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: create pet as user should return 200 and pet in response
-10:58:20.404 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: create pet as user should return 200 and pet in response
-10:58:25.841 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP POST https://petstore.swagger.io/v2/pet
-10:58:26.542 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-10:58:26.784 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [pl.leszekp.petstore.dto.Pet@3e76de78] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-10:58:29.695 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-10:58:29.711 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
-10:58:29.873 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: create pet as user should return 200 and pet in response
-10:58:29.906 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: create pet as user should return 200 and pet in response
-10:58:29.970 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return pet with status code 200
-10:58:29.973 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return pet with status code 200
-10:58:30.044 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/9222968140497241305
-10:58:30.060 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-10:58:30.448 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-10:58:30.451 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
-10:58:30.460 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return pet with status code 200
-10:58:30.460 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return pet with status code 200
-10:58:30.461 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: update pet as user should return 200 and pet in response
-10:58:30.461 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: update pet as user should return 200 and pet in response
-10:58:30.473 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP PUT https://petstore.swagger.io/v2/pet
-10:58:30.478 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-10:58:30.483 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [pl.leszekp.petstore.dto.Pet@2ecb33d4] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-10:58:30.858 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-10:58:30.859 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
-10:58:30.860 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: update pet as user should return 200 and pet in response
-10:58:30.862 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: update pet as user should return 200 and pet in response
-10:58:30.862 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: update pet as user should return 200 and statute should be sold
-10:58:30.868 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: update pet as user should return 200 and statute should be sold
-10:58:30.909 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP PUT https://petstore.swagger.io/v2/pet
-10:58:30.912 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-10:58:30.916 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [pl.leszekp.petstore.dto.Pet@4d24e4a9] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-10:58:31.325 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-10:58:31.325 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
-10:58:31.327 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: update pet as user should return 200 and statute should be sold
-10:58:31.328 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: update pet as user should return 200 and statute should be sold
-10:58:31.329 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: delete pet should delete pet with status code 200
-10:58:31.329 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: delete pet should delete pet with status code 200
-10:58:31.345 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP DELETE https://petstore.swagger.io/v2/pet/9222968140497241307
-10:58:31.346 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[text/plain, application/json, application/*+json, */*]
-10:58:31.346 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [] with org.springframework.http.converter.StringHttpMessageConverter
-10:58:31.707 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-10:58:31.707 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [java.lang.String] as "application/json"
-10:58:31.754 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: delete pet should delete pet with status code 200
-10:58:31.755 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: delete pet should delete pet with status code 200
-10:58:31.755 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: delete pet1 should delete pet with status code 404
-10:58:31.756 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: delete pet1 should delete pet with status code 404
-10:58:31.764 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP DELETE https://petstore.swagger.io/v2/pet/9222968140497241307
-10:58:31.765 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[text/plain, application/json, application/*+json, */*]
-10:58:31.766 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [] with org.springframework.http.converter.StringHttpMessageConverter
-10:58:31.889 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 404 NOT_FOUND
-10:58:31.995 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: delete pet1 should delete pet with status code 404
-10:58:31.998 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: delete pet1 should delete pet with status code 404
-10:58:32.001 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After spec: petstore.PetStoreSpec
-10:58:32.319 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Getting classpath resource text: spock-feature-report.css
-10:58:32.342 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Found css resource (2987 characters long)
-10:58:32.343 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Inlining css in HTML report
+  <testcase name="create pet as user should return 200 and pet in response" classname="petstore.PetStoreSpec" time="7.696"/>
+  <testcase name="get pet should return pet with status available" classname="petstore.PetStoreSpec" time="0.481"/>
+  <testcase name="update pet as user should return 200 and statute should be pending" classname="petstore.PetStoreSpec" time="0.594"/>
+  <testcase name="get pet should return pet" classname="petstore.PetStoreSpec" time="0.501"/>
+  <testcase name="update pet as user should return 200 and statute should be sold" classname="petstore.PetStoreSpec" time="0.384"/>
+  <testcase name="get pet should return pet with status sold" classname="petstore.PetStoreSpec" time="0.39"/>
+  <testcase name="get pet should return pet with status code 200" classname="petstore.PetStoreSpec" time="0.391"/>
+  <testcase name="update pet as user should return 200" classname="petstore.PetStoreSpec" time="0.387"/>
+  <testcase name="delete pet should delete pet with status code 200" classname="petstore.PetStoreSpec" time="0.457"/>
+  <testcase name="delete pet1 should delete pet with status code 404" classname="petstore.PetStoreSpec" time="0.202"/>
+  <testcase name="get pet should return 404 - deleted user does not exist" classname="petstore.PetStoreSpec" time="0.155"/>
+  <system-out><![CDATA[20:45:53.729 [Test worker] INFO com.athaydes.spockframework.report.SpockReportExtension - Got configuration from Spock: com.athaydes.spockframework.report.internal.SpockReportsConfiguration([:])
+20:45:54.041 [Test worker] DEBUG com.athaydes.spockframework.report.SpockReportExtension - Configuring com.athaydes.spockframework.report.SpockReportExtension
+20:45:54.720 [Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.aggregatedJsonReportDir=, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true, com.athaydes.spockframework.report.outputDir=build/spock-reports, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.specSummaryNameOption=class_name_and_title, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator}
+20:45:56.742 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property projectVersion set to Unknown
+20:45:56.743 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property aggregatedJsonReportDir set to 
+20:45:56.745 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'enabled' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
+20:45:56.783 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property printThrowableStackTrace set to false
+20:45:56.784 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'specTemplateFile' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
+20:45:56.784 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'reportFileExtension' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
+20:45:56.878 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property hideEmptyBlocks set to false
+20:45:56.881 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'summaryTemplateFile' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
+20:45:56.882 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Ignoring property 'summaryFileName' for IReportCreator of incompatible type com.athaydes.spockframework.report.internal.HtmlReportCreator
+20:45:56.884 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property enabled set to true
+20:45:56.886 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property outputDir set to build/spock-reports
+20:45:56.888 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property projectName set to 
+20:45:56.888 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property showCodeBlocks set to false
+20:45:56.898 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property specSummaryNameOption set to class_name_and_title
+20:45:56.900 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property inlineCss set to true
+20:45:56.906 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property featureReportCss set to spock-feature-report.css
+20:45:56.908 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property testSourceRoots set to src/test/groovy
+20:45:56.920 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property summaryReportCss set to spock-summary-report.css
+20:45:56.922 [Test worker] DEBUG com.athaydes.spockframework.report.internal.ConfigLoader - Property excludeToc set to false
+20:45:58.536 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before spec: petstore.PetStoreSpec
+20:45:58.560 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: create pet as user should return 200 and pet in response
+20:45:58.690 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: create pet as user should return 200 and pet in response
+20:46:03.685 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP POST https://petstore.swagger.io/v2/pet
+20:46:04.083 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:04.221 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [Pet{id=null, name='Rex', photoUrls=[https://pixnio.com/free-images/2018/06/09/2018-06-09-11-57-07-1200x855.png], tag=null, status=AVAILABLE}] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+20:46:06.049 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:06.057 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
+20:46:06.184 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: create pet as user should return 200 and pet in response
+20:46:06.282 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: create pet as user should return 200 and pet in response
+20:46:06.291 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return pet with status available
+20:46:06.293 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return pet with status available
+20:46:06.316 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/findByStatus?status=AVAILABLE
+20:46:06.319 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:06.686 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:06.688 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet[]]
+20:46:06.772 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return pet with status available
+20:46:06.773 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return pet with status available
+20:46:06.773 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: update pet as user should return 200 and statute should be pending
+20:46:06.774 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: update pet as user should return 200 and statute should be pending
+20:46:06.922 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP PUT https://petstore.swagger.io/v2/pet
+20:46:06.932 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:06.949 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [Pet{id=null, name='Rex1', photoUrls=[https://pixnio.com/free-images/2018/06/09/2018-06-09-11-57-07-1200x855.png], tag=null, status=PENDING}] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+20:46:07.361 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:07.363 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
+20:46:07.366 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: update pet as user should return 200 and statute should be pending
+20:46:07.368 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: update pet as user should return 200 and statute should be pending
+20:46:07.368 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return pet
+20:46:07.371 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return pet
+20:46:07.400 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/findByStatus?status=PENDING
+20:46:07.402 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:07.854 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:07.856 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet[]]
+20:46:07.865 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return pet
+20:46:07.870 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return pet
+20:46:07.871 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: update pet as user should return 200 and statute should be sold
+20:46:07.872 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: update pet as user should return 200 and statute should be sold
+20:46:07.878 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP PUT https://petstore.swagger.io/v2/pet
+20:46:07.892 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:07.901 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [Pet{id=null, name='Rex2', photoUrls=[https://pixnio.com/free-images/2018/06/09/2018-06-09-11-57-07-1200x855.png], tag=null, status=SOLD}] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+20:46:08.251 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:08.252 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
+20:46:08.254 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: update pet as user should return 200 and statute should be sold
+20:46:08.255 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: update pet as user should return 200 and statute should be sold
+20:46:08.256 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return pet with status sold
+20:46:08.257 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return pet with status sold
+20:46:08.262 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/findByStatus?status=SOLD
+20:46:08.262 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:08.635 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:08.636 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet[]]
+20:46:08.643 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return pet with status sold
+20:46:08.644 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return pet with status sold
+20:46:08.647 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return pet with status code 200
+20:46:08.649 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return pet with status code 200
+20:46:08.663 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/9222968140497248600
+20:46:08.665 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:09.034 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:09.035 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
+20:46:09.037 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return pet with status code 200
+20:46:09.038 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return pet with status code 200
+20:46:09.038 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: update pet as user should return 200
+20:46:09.039 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: update pet as user should return 200
+20:46:09.050 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP PUT https://petstore.swagger.io/v2/pet
+20:46:09.059 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:09.061 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [Pet{id=null, name='null', photoUrls=null, tag=null, status=AVAILABLE}] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+20:46:09.419 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:09.419 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [pl.leszekp.petstore.dto.Pet]
+20:46:09.422 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: update pet as user should return 200
+20:46:09.424 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: update pet as user should return 200
+20:46:09.424 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: delete pet should delete pet with status code 200
+20:46:09.425 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: delete pet should delete pet with status code 200
+20:46:09.432 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP DELETE https://petstore.swagger.io/v2/pet/9222968140497248601
+20:46:09.432 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[text/plain, application/json, application/*+json, */*]
+20:46:09.432 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [] with org.springframework.http.converter.StringHttpMessageConverter
+20:46:09.786 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+20:46:09.786 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [java.lang.String] as "application/json"
+20:46:09.881 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: delete pet should delete pet with status code 200
+20:46:09.881 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: delete pet should delete pet with status code 200
+20:46:09.882 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: delete pet1 should delete pet with status code 404
+20:46:09.882 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: delete pet1 should delete pet with status code 404
+20:46:09.901 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP DELETE https://petstore.swagger.io/v2/pet/9222968140497248601
+20:46:09.902 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[text/plain, application/json, application/*+json, */*]
+20:46:09.902 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [] with org.springframework.http.converter.StringHttpMessageConverter
+20:46:10.016 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 404 NOT_FOUND
+20:46:10.083 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: delete pet1 should delete pet with status code 404
+20:46:10.085 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: delete pet1 should delete pet with status code 404
+20:46:10.085 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: get pet should return 404 - deleted user does not exist
+20:46:10.086 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: get pet should return 404 - deleted user does not exist
+20:46:10.120 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://petstore.swagger.io/v2/pet/9222968140497248601
+20:46:10.124 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+20:46:10.237 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 404 NOT_FOUND
+20:46:10.239 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: get pet should return 404 - deleted user does not exist
+20:46:10.240 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: get pet should return 404 - deleted user does not exist
+20:46:10.242 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After spec: petstore.PetStoreSpec
+20:46:10.417 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Getting classpath resource text: spock-feature-report.css
+20:46:10.426 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Found css resource (2987 characters long)
+20:46:10.427 [Test worker] DEBUG com.athaydes.spockframework.report.internal.CssResource - Inlining css in HTML report
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

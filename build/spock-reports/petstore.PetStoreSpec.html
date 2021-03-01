@@ -251,7 +251,7 @@ div.footer {
 </div>
 <div class='summary-report'>
 <h3>Summary:</h3>
-<div class='date-test-ran'>Created on Mon Mar 01 10:58:32 CET 2021 by l-pis</div>
+<div class='date-test-ran'>Created on Mon Mar 01 20:46:10 CET 2021 by l-pis</div>
 <table class='summary-table'>
 <thead>
 <th>Executed features</th>
@@ -263,12 +263,12 @@ div.footer {
 </thead>
 <tbody>
 <tr>
-<td>6</td>
+<td>11</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100,0%</td>
-<td>11,718 seconds</td>
+<td>11,698 seconds</td>
 </tr>
 </tbody>
 </table>
@@ -285,19 +285,34 @@ div.footer {
 <a href='#1460181365' class='feature-toc-pass'>create pet as user should return 200 and pet in response</a>
 </li>
 <li>
-<a href='#56305186' class='feature-toc-pass'>get pet should return pet with status code 200</a>
+<a href='#-2096183802' class='feature-toc-pass'>get pet should return pet with status available</a>
 </li>
 <li>
-<a href='#1459202' class='feature-toc-pass'>update pet as user should return 200 and pet in response</a>
+<a href='#-1011122848' class='feature-toc-pass'>update pet as user should return 200 and statute should be pending</a>
+</li>
+<li>
+<a href='#1365364913' class='feature-toc-pass'>get pet should return pet</a>
 </li>
 <li>
 <a href='#460832171' class='feature-toc-pass'>update pet as user should return 200 and statute should be sold</a>
+</li>
+<li>
+<a href='#-1279924361' class='feature-toc-pass'>get pet should return pet with status sold</a>
+</li>
+<li>
+<a href='#56305186' class='feature-toc-pass'>get pet should return pet with status code 200</a>
+</li>
+<li>
+<a href='#-530157296' class='feature-toc-pass'>update pet as user should return 200</a>
 </li>
 <li>
 <a href='#1206588562' class='feature-toc-pass'>delete pet should delete pet with status code 200</a>
 </li>
 <li>
 <a href='#342903387' class='feature-toc-pass'>delete pet1 should delete pet with status code 404</a>
+</li>
+<li>
+<a href='#1323834024' class='feature-toc-pass'>get pet should return 404 - deleted user does not exist</a>
 </li>
 </ul>
 <tr>
@@ -315,7 +330,7 @@ div.footer {
 <div class='block-kind'>Given:</div>
 </td>
 <td>
-<div class='block-text'>----</div>
+<div class='block-text'>name, status, photoUrls</div>
 </td>
 </tr>
 <tr>
@@ -336,34 +351,8 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='56305186'>
-<span>get pet should return pet with status code 200</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>----</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>----</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='1459202'>
-<span>update pet as user should return 200 and pet in response</span>
+<div class='feature-description' id='-2096183802'>
+<span>get pet should return pet with status available</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
 </span>
@@ -375,7 +364,75 @@ div.footer {
 <div class='block-kind'>Given:</div>
 </td>
 <td>
+<div class='block-text'>status</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
 <div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1011122848'>
+<span>update pet as user should return 200 and statute should be pending</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>name, status, photoUrls</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1365364913'>
+<span>get pet should return pet</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>status</div>
 </td>
 </tr>
 <tr>
@@ -409,7 +466,109 @@ div.footer {
 <div class='block-kind'>Given:</div>
 </td>
 <td>
+<div class='block-text'>name, status, photoUrls</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
 <div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1279924361'>
+<span>get pet should return pet with status sold</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>status</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='56305186'>
+<span>get pet should return pet with status code 200</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>pet_id</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-530157296'>
+<span>update pet as user should return 200</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>status</div>
 </td>
 </tr>
 <tr>
@@ -440,6 +599,14 @@ div.footer {
 </tr>
 <tr>
 <td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>pet_id</div>
+</td>
+</tr>
+<tr>
+<td>
 <div class='block-kind'>When:</div>
 </td>
 <td>
@@ -462,6 +629,48 @@ div.footer {
 <a href='#toc'>Return</a>
 </span>
 </div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>pet_id</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>----</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1323834024'>
+<span>get pet should return 404 - deleted user does not exist</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>pet_id</div>
 </td>
 </tr>
 <tr>

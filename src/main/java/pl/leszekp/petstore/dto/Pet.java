@@ -55,4 +55,15 @@ public class Pet {
     public void setStatus(final Status status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", photoUrls=" + photoUrls +
+                ", tag=" + tag +
+                ", status=" + status +
+                '}';
+    }
 }
